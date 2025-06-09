@@ -8,11 +8,20 @@ export type Aventura = {
   resumo: string;
 };
 
+function escolhaAleatorio<T>(lista: T[]): T {
+  const indice = Math.floor(Math.random() * lista.length);
+  return lista[indice]
+}
+
 export function gerarAventura(): Aventura {
+  
+  const local = escolhaAleatorio(locais);
+  const desafio = escolhaAleatorio(desafios);
+
   return {
-    titulo: 'Aventura no Castelo',
-    local: 'Castelo Abandonado',
-    desafio: 'Enfrentar um dragão',
-    resumo: 'Você explora um castelo e encontra um dragão feroz.'
+    titulo: `Aventura em ${local}`,
+    local,
+    desafio,
+    resumo: `Você está em ${local.toLowerCase()} e precisa enfrentar ${desafio.toLowerCase()}.`
   };
 }
