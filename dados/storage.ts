@@ -1,5 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { Aventura } from './generator';
+import { Aventura } from '../components/generator';
 
 export async function salvarAventura(aventura: Aventura): Promise<void> {
   const jsonValue = JSON.stringify(aventura);
