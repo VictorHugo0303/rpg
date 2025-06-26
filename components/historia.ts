@@ -429,7 +429,7 @@ export function gerarHistoria(aventura: Aventura): Historia[] {
   }
 
   // caso 7: castelo + sentinelas
-  if (local.includes('floresta') && desafio.includes('sentinelas')) {
+  if (local.includes('castelo') && desafio.includes('sentinelas')) {
     return [
       {
       id: 'inicio',
