@@ -76,7 +76,7 @@ export default function Aventura() {
         >
           <Text style={styles.buttonText}>
             {opcao.dificuldade !== undefined
-              ? `${opcao.texto} (🎯 precisa ${opcao.dificuldade})`
+              ? `${opcao.texto} (precisa ${opcao.dificuldade} 🎲)`
               : opcao.texto}
           </Text>
         </TouchableOpacity>
